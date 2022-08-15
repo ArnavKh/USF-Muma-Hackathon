@@ -1,0 +1,441 @@
+/* CSS document for the USF website */
+
+/* standard styles that should be present on all pages */
+
+body {
+    background-color: #FAFAFA;
+}
+
+figcaption {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #01553e;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 250%;
+    font-family: 'Questrial', sans-serif;
+}
+
+h2 {
+    font-family: 'Questrial', sans-serif;
+    margin: 0px;
+    font-size: 200%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    width: 100%;
+}
+
+hr {
+    height: 3px;
+    background-color: #01553e;
+    opacity: 0.7;
+}
+
+ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    list-style-type: none;
+}
+
+p, li, ul, ol {
+    font-family: 'Roboto', sans-serif;
+}
+
+i {
+    margin: 0px 5px;
+    color: #01553e;
+}
+
+/* navigation bar */
+
+nav {
+    z-index: 1;
+    background-color: #01553e;
+    padding-top: 14pt;
+    padding-bottom: 14pt;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    animation: nav 2s;
+    animation-fill-mode: forwards;
+    -moz-animation: nav 2s;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation: nav 2s;
+    -webkit-animation-fill-mode: forwards;
+    position: absolute;
+    display: inline;
+    border-radius: 4px;
+    padding-left: 5px;
+    width: 100%;
+    color: rgb(224, 255, 50);
+    overflow: hidden;
+    top: 0px;
+    will-change: animation, transform, padding-left, margin-left;
+}
+
+@keyframes nav {
+    from {
+        transform: translateX(-2000px);
+    }
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+@-webkit-keyframes nav {
+    from {
+        transform: translateX(-2000px);
+    }
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+@-moz-keyframes nav {
+    from {
+        transform: translateX(-2000px);
+    }
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+/*Text in nav bar*/
+
+nav a {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    text-decoration: none;
+    color: rgb(224, 255, 50);
+    font-size: 20pt;
+    position: static;
+    font-family: 'Questrial', sans-serif;
+    margin-left: 50px;
+}
+
+#icon {
+    display: none;
+}
+
+nav a:hover {
+    background-color: black;
+    padding-top: 22px;
+    padding-bottom: 18px;
+    overflow: hidden;
+    opacity: 0.90;
+}
+
+.active {
+    background-color: rgb(0, 0, 0);
+    padding-top: 23px;
+    padding-bottom: 18px;
+    opacity: 0.90;
+}
+
+#mumalogo {
+    height: 69px;
+    margin-top: -19px;
+    margin-bottom: -24px;
+    margin-left: -40px;
+    margin-right: -4px;
+    display: initial;
+}
+/* responsive page design that lowers the font up to a certain point */
+
+ @media screen and (max-width: 1800px) {
+    nav a {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+}
+
+
+@media screen and (max-width: 1500px){
+    nav a {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    nav a {
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    nav a {
+        padding-left: 0.2vw;
+        padding-right: 0.2vw;
+    }
+}
+
+/* Slide show animation stuff
+make sure to make changes to both the normal animation parts
+and to the -webkit- to ensure compatibility */
+
+.slides {
+    width: 900px;
+    height: 500px;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 8s;
+    animation-name: slide;
+    animation-duration: 8s;
+    -moz-animation-name: slide;
+    -moz-animation-duration: 8s;
+    display: none;
+    position: absolute;
+    float: left;
+    margin-left: 230px;
+    will-change: opacity;
+    z-index: 0;
+}
+
+.slideshow {
+    position: absolute;
+}
+
+@-moz-keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* footer */
+
+footer {
+    background-color: #006847;
+    padding: 20px;
+    width: 100%;
+    margin-left: -11px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    clear: both;
+    position: static;
+    bottom: 0;
+    text-decoration: none;
+}
+
+.footer {
+    position: static;
+    width: 100%;
+}
+
+.footercontent {
+    text-align: center;
+}
+
+/* content spaces */
+
+section {
+    margin: 0vw 12vw 0vw 12vw;
+}
+
+.slidebelow {
+    clear: both;
+    margin: 520px 0px 0px 0px auto;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 220px;
+    animation-name: flyby;
+    animation-duration: 2s;
+    -webkit-animation-name: flyby;
+    -webkit-animation-duration: 2s;
+    -moz-animation-name: flyby;
+    -moz-animation-duration: 2s;
+    will-change: margin-left, margin-right;
+}
+
+.slideaside {
+    background-color: #006847;
+    width: 500px;
+    height: 490px;
+    /* float: left; */
+    padding-left: 10px;
+    border: 5px solid #006847;
+    transform: translateX(1130px);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 125%;
+    animation-name: flyin;
+    animation-duration: 2s;
+    -webkit-animation-name: flyin;
+    -webkit-animation-duration: 2s;
+    -moz-animation-name: flyin;
+    -moz-animation-duration: 2s;
+    position: relative;
+    will-change: transform;
+}
+
+.slideaside h1 {
+    color: rgb(224, 255, 50);
+    opacity: 0.75;
+}
+
+@keyframes flyin {
+    from {
+        transform: translateX(1920px);
+    }
+    to {
+        transform: translateX(1130px);
+    }
+}
+
+@-webkit-keyframes flyin {
+    from {
+        transform: translateX(1920px);
+    }
+    to {
+        transform: translateX(1130px);
+    }
+}
+
+@-moz-keyframes flyin {
+    from {
+        transform: translateX(1920px);
+    }
+    to {    
+        transform: translateX(1130px);
+    }
+}
+
+@keyframes flyby {
+    from {
+        transform: translateX(-1900px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes flyby {
+    from {
+        transform: translateX(-1900px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@-moz-keyframes flyby {
+    from {
+        transform: translateX(-1900px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.news {
+    text-align: center;
+}
+
+th {
+    padding: 20px 10px;
+    text-align: left;
+    color: rgb(224, 255, 50);
+    font-size: 120%;
+    opacity: 0.9;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+table {
+    float: left;
+    margin: 20px 10px;
+    font-size: 110%;
+    height: 400px;
+    width: 730px;
+    background-color: #006847;
+    color: #FFFFFF;
+}
+
+footer a:link, footer a:active, footer, footer a {
+    color: white;
+}
+
+.titleslidein {
+    animation: title 2s;
+    -webkit-animation: title 2s;
+    -moz-animation: title 2s;
+    will-change: transform;
+} 
+
+@keyframes title {
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@-moz-keyframes title {
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes title {
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+/* Improvements to performance:
+added vendor specific prefixes 
+made animations run in the composite layer within the critical rendering path instead of the styles
+and added the will-change style so the browser understands and can optimize
+ */
